@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     menuCheckbox.addEventListener('change', function () {
         if (menuImg.src.includes('menu.png')) {
-            menuImg.src = 'img/x.jpg';
+            menuImg.src = 'x.jpg';
         } else {
-            menuImg.src = 'img/menu.png';
+            menuImg.src = 'menu.png';
         }
     });
 });
