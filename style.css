@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: linear-gradient(45deg, #00ff00, #00ff7f, #00ffbf, #00ffff, #00bfff, #007fff, #003fff);
+    background-size: 1400%;
+    animation: gradientBG 100s ease infinite; /* Ajusta la duración de la animación */
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.menu.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.back {
+    padding: 32px 0;
+    background-color: #2A394F;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    opacity: 0.8;
+}
+
+.logo {
+    font-size: 30px;
+    color: #15A4F9;
+    font-weight: 800;
+    text-transform: uppercase;
+    width: 25px;
+    margin-top: 25px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
+    position: relative;
+}
+
+.menu .navbar ul li a:hover {
+    color: #15A4F9;
+}
+
+.menu .navbar ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #15A4F9;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+
+.menu .navbar ul li a:hover::before {
+    opacity: 1;
+    animation: neonGlow 10s infinite alternate; /* Ajusta la duración de la animación */
+}
+
+@keyframes neonGlow {
+    0% {
+        border-color: #15A4F9;
+        box-shadow: 0 0 5px #15A4F9, 0 0 10px #15A4F9;
+    }
+    100% {
+        border-color: #15A4F9;
+        box-shadow: 0 0 20px #15A4F9, 0 0 30px #15A4F9;
+    }
+}
+
+#menu {
+    display: none;
+}
+
+.menu label {
+    cursor: pointer;
+    display: initial;
+}
+
+@media(max-width: 991px) {
+    .menu {
+        padding: 30px 0;
+    }
+}
+
+.back {
+    padding: 40px;
+}
+
+.menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #2A394F;
+    display: none;
+    opacity: 0;
+    transition: opacity 100s ease; /* Ajuste de la duración de la transición */
+}
+
+
+.menu .navbar ul li {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#menu:checked ~ .navbar {
+    display: initial;
+    opacity: 1;
+}
+
+.image {
+    width: 30px;
+    margin-top: 25px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+#menu:checked ~ .image {
+    transform: rotate(90deg);
+}
