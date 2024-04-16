@@ -17,9 +17,7 @@ body {
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-}
-body {
-    background: linear-gradient(45deg, #00ff00, #00ff7f, #00ffbf, #00ffff, #00bfff, #007fff, #003fff);
+     background: linear-gradient(45deg, #00ff00, #00ff7f, #00ffbf, #00ffff, #00bfff, #007fff, #003fff);
     background-size: 1400%;
     animation: gradientBG 100s ease infinite; /* Ajusta la duración de la animación */
 }
