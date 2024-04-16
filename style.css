@@ -161,3 +161,6 @@ body {
 #menu:checked ~ .image {
     transform: rotate(90deg);
 }
+a.{
+    font-family: 'MinePlayer', Arial, sans-serif;
+}
