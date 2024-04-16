@@ -1,24 +1,15 @@
-@font-face {
-    font-family: 'MinePlayer';
-    src: url('mine_player.ttf') format('truetype');
-    /* Puedes agregar más fuentes como bold, italic, etc. si están disponibles */
-}
-
-body {
-    font-family: 'MinePlayer', Arial, sans-serif;
-    background: linear-gradient(45deg, #00ff00, #00ff7f, #00ffbf, #00ffff, #00bfff, #007fff, #003fff);
-    background-size: 1400%;
-    animation: gradientBG 100s ease infinite; /* Ajusta la duración de la animación */
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #fff; /* Color de texto blanco */
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+}
+
+body {
+    background: linear-gradient(45deg, #00ff00, #00ff7f, #00ffbf, #00ffff, #00bfff, #007fff, #003fff);
+    background-size: 1400%;
+    animation: gradientBG 100s ease infinite; /* Ajusta la duración de la animación */
 }
 
 @keyframes gradientBG {
@@ -96,7 +87,7 @@ body {
 
 .menu .navbar ul li a:hover::before {
     opacity: 1;
-    animation: neonGlow 0.5s infinite alternate; /* Ajusta la duración de la animación */
+    animation: neonGlow 10s infinite alternate; /* Ajusta la duración de la animación */
 }
 
 @keyframes neonGlow {
@@ -110,9 +101,54 @@ body {
     }
 }
 
+#menu {
+    display: none;
+}
+
+.menu label {
+    cursor: pointer;
+    display: initial;
+}
+
+@media(max-width: 991px) {
+    .menu {
+        padding: 30px 0;
+    }
+}
+
+.back {
+    padding: 40px;
+}
+
+.menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #2A394F;
+    display: none;
+    opacity: 0;
+    transition: opacity 100s ease; /* Ajuste de la duración de la transición */
+}
+
+
+.menu .navbar ul li {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#menu:checked ~ .navbar {
+    display: initial;
+    opacity: 1;
+}
+
 .image {
     width: 30px;
     margin-top: 25px;
     filter: brightness(0) invert(1);
     transition: transform 0.3s ease;
+}
+
+#menu:checked ~ .image {
+    transform: rotate(90deg);
 }
