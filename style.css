@@ -1,11 +1,23 @@
-* {
+* @font-face {
+    font-family: 'MinePlayer';
+    src: url('mine_player.ttf') format('truetype');
+    /* Puedes agregar más fuentes como bold, italic, etc. si están disponibles */
+}
+
+body {
+    font-family: 'MinePlayer', Arial, sans-serif;
+    background-color: #222; /* Fondo negro */
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff; /* Color de texto blanco */
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
-
 body {
     background: linear-gradient(45deg, #00ff00, #00ff7f, #00ffbf, #00ffff, #00bfff, #007fff, #003fff);
     background-size: 1400%;
