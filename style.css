@@ -68,6 +68,7 @@ body {
 .menu .navbar ul li {
     position: relative;
     float: left;
+    font-family: 'MinePlayer', Arial, sans-serif;
 }
 
 .menu .navbar ul li a {
